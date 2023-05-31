@@ -1,0 +1,14 @@
+<div class="container mx-5 my-5">
+  <div class="card px-4 py-4">
+    <h2><%= @task.title %></h2>
+    <p><%= @task.details %></p>
+    <p><%= @task.completed %></p>
+
+    <%= link_to "back to list", tasks_path %>
+
+    <%= link_to "Delete",
+      task_path(@task),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+    %>
+  </div>
+</div>

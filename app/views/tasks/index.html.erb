@@ -1,0 +1,13 @@
+<div class="container mx-5 my-5">
+  <div class="card px-4 py-4">
+  <h1>Tasks</h1>
+  <ul>
+    <% @tasks.each do |task| %>
+      <li class="list-group-item"><input class="form-check-input me-1" type="checkbox" value="" aria-label="..."><%= link_to task.title, task_path(task) %></li>
+    <% end %>
+  </ul>
+    <div >
+      <%= link_to "add a new task", tasks_new_path %>
+    </div>
+  </div>
+</div>
